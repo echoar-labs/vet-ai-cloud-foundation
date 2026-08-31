@@ -1,13 +1,13 @@
 /*
  * Terraform Backend — Google Cloud Storage
  * 
- * Bucket padrão para fundação: gs://vet-ai-foundation-state-bucket
- * (Criar primeiro no projeto iniapet-ops antes de rodar terraform init)
+ * Bucket padrão para fundação: gs://foundation-state-iniapet
+ * (Bucket criado pela SA inia-ops-prod no projeto iniapet-ops)
  */
 
 terraform {
   backend "gcs" {
-    bucket = "vet-ai-foundation-state-bucket"
+    bucket = "foundation-state-iniapet"
     prefix = "terraform/state"
   }
 }
